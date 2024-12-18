@@ -1,0 +1,663 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: "Parkinsans", serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  /* overflow-y: hidden; */
+}
+:root {
+  --black-color: #07020d;
+
+  --aero-color: #5db7de;
+  --alabaster-color: #f1e9db;
+  --khaki-color: #b8860b;
+  --dimgrey-color: #716a5c;
+  --white: hsla(0, 0%, 100%, 1);
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--white);
+}
+li {
+  list-style-type: none;
+}
+button {
+  cursor: pointer;
+}
+body {
+  background-color: var(--black-color);
+  color: var(--white);
+  overflow-x: hidden;
+}
+h1 {
+  font-size: 7.7rem;
+}
+h2 {
+  font-size: 4rem;
+}
+.section-common--heading {
+  font-size: 2.8rem;
+  color: var(--aero-color) !important;
+}
+.section-common--subheading {
+  font-size: 2.2rem;
+}
+
+.parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Base Rules */
+/***** Header/Navbar Section *****/
+
+#headerSection {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/hero_slider/coffe_bg.webp");
+  animation: imageSlider 5s infinite linear;
+  -webkit-animation: imageSlider 5s infinite linear;
+}
+#headerSection a {
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 1rem;
+  letter-spacing: 1;
+  :hover {
+    color: var(--aero-color);
+  }
+}
+#headerSection i {
+  padding: 1rem;
+  letter-spacing: 2px;
+}
+#headerSection .menu {
+  font-size: 3rem;
+  display: none;
+}
+
+@keyframes imageSlider {
+  0% {
+    background-image: url("../images/hero_slider/coffe_bg.webp");
+  }
+
+  50% {
+    background-image: url("../images/hero_slider/lunch_bg.webp");
+  }
+  100% {
+    background-image: url("../images/hero_slider/pizza_bg.webp");
+  }
+}
+
+#headerSection #navbarSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.5rem;
+}
+
+#navbarSection a {
+  font-weight: 600;
+  font-size: 1.6rem;
+  position: relative;
+
+  &:hover {
+    color: var(--aero-color);
+  }
+}
+
+#navbarSection .navItems a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--aero-color);
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+  -moz-transition: width 0.3s ease;
+  -ms-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+}
+#navbarSection a:hover::after {
+  width: 100%;
+}
+#navbarSection .navItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+#navbarSection img {
+  width: 25%;
+}
+#navbarSection .img {
+  text-align: center;
+}
+#navbarSection .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navbarSection .tableBtn {
+  padding: 1rem 2.5rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--black-color);
+  background-color: var(--aero-color);
+  border: 1px solid var(--aero-color);
+  transition: all 0.7s ease;
+  &:hover {
+    background-color: transparent;
+    color: var(--white);
+  }
+  #navbarSection .bookTableBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/***** End Header/Navbar Section *****/
+/***** Hero Section *****/
+#heroSection {
+  padding: 10rem 0 5rem 0;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+}
+
+#heroSection .section-common--heading,
+.section-common--subheading {
+  color: var(--khaki-color);
+  font-weight: 600;
+}
+#heroSection h1 {
+  margin: 1rem 0 2rem 0;
+}
+#heroSection .menuBtn {
+  margin: 2.5rem;
+  padding: 1rem 5.2rem;
+  font-size: 1.8rem;
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--aero-color);
+  transition: 0.7s all ease;
+  &:hover {
+    background-color: var(--aero-color);
+    color: black;
+  }
+}
+
+/***** End Hero Section *****/
+
+/***** End MEnu Section *****/
+/***** Story Section *****/
+#storySection {
+  padding: 10rem 0;
+  background-image: url("../images/testimonial-bg.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  /* border: 2px solid var(--aero-color); */
+}
+#storySection .storyHeading {
+  color: var(--white);
+  font-size: 4rem;
+  margin: 2.5rem 0 3rem 0;
+}
+#storySection .section-common--subheading {
+  color: var(--white);
+
+  text-align: justify;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-family: "Quicksand", serif;
+}
+#storySection .section-common--heading {
+  color: var(--khaki-color);
+}
+#storySection img {
+  width: 100%;
+  border: 5px solid var(--aero-color);
+}
+#storySection .parent {
+  gap: 20rem;
+}
+#storySection .callBook {
+  font-size: 2rem;
+  word-spacing: 1;
+  color: var(--aero-color);
+}
+#storySection .readMore {
+  padding: 1rem 2rem;
+  margin: 2rem;
+  font-size: 1.6rem;
+  border: 2px solid var(--aero-color);
+  color: var(--aero-color);
+  font-weight: 700;
+  transition: 0.7s all ease;
+  &:hover {
+    background-color: var(--aero-color);
+    color: var(--black-color);
+  }
+}
+/***** End Story Section *****/
+/***** Why choose us Section *****/
+#whyChooseUs {
+  background-color: #28231d;
+  padding: 5rem 0 10rem 0;
+}
+
+#whyChooseUs h2 {
+  margin: 0.5rem 0 3.5rem 0;
+  color: var(--khaki-color);
+}
+#whyChooseUs .card {
+  padding: 1.6rem;
+  cursor: pointer;
+  color: var(--white);
+  background-color: #1a1814;
+  border: 2px solid var(--black-color);
+  transition: 1s ease;
+  word-spacing: 1px;
+
+  & .cardNum {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+  & .cardHeading {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  & .cardContent {
+    font-size: 2rem;
+  }
+  &:hover {
+    background-color: #cda45e;
+    color: var(--white);
+    border: 2px solid var(--aero-color);
+  }
+}
+/***** End Why choose us Section *****/
+/***** Swiper Section *****/
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 5rem 0 0 0;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/***** End Swiper Section *****/
+
+/***** Events Section *****/
+#eventSection {
+  background-image: linear-gradient(to top, transparent, black 100%),
+    url("../images/eventBanner.webp");
+
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5rem 0 10rem 0;
+}
+
+#eventSection h2 {
+  margin: 0 0 3rem 0;
+  color: var(--khaki-color);
+}
+#eventSection .swiperImg {
+  width: 60%;
+}
+#eventSection .swiperText {
+  text-align: start;
+}
+#eventSection .section-common--subheading {
+  margin: 0 0 4rem 0;
+  font-weight: 800;
+}
+
+#eventSection .swiperContent {
+  font-size: 1.6rem;
+  word-spacing: 1px;
+  text-align: justify;
+  color: var(--alabaster-color);
+  font-weight: 700;
+  font-family: "Jost", serif;
+}
+/***** End Events Section *****/
+/***** Book Table Section *****/
+#bookTableSection {
+  padding: 5rem 0 10rem 0;
+}
+#bookTableSection h2 {
+  margin: 0.5rem 0 3.5rem 0;
+  color: var(--khaki-color);
+}
+
+#bookTableSection input,
+textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid var(--khaki-color);
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--white);
+}
+#bookTableSection #textArea {
+  margin: 2rem 0 0 0;
+}
+#bookTableSection .submitBtn {
+  padding: 1rem 5rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  background-color: transparent;
+  border: 2px solid var(--khaki-color);
+  color: var(--white);
+  transition: 0.7s all ease;
+}
+#bookTableSection .submitBtn:hover {
+  background-color: var(--aero-color);
+  color: var(--black-color);
+}
+#bookTableSection .submitBtnDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+/***** End Book Table Section *****/
+/***** Gallery Section *****/
+#gallerySection {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+#gallerySection h2 {
+  margin: 2rem 0;
+
+  color: var(--khaki-color);
+  padding: 1rem;
+  border: 1px solid var(--khaki-color);
+  background-color: var(--black-color);
+}
+/***** End Gallery Section *****/
+
+/***** contact Section *****/
+#contactSection {
+  background-color: #28231d;
+  padding: 5rem 0;
+}
+#contactSection .section-common--subheading {
+  margin: 1rem 0 5rem 0;
+}
+/***** End contact Section *****/
+
+/***** Footer Section *****/
+#footerSection {
+  background-image: url("../images/footer-bg.jpg");
+  color: #f8ffff;
+  padding: 5rem 0 0 0;
+  position: relative;
+}
+#footerSection a {
+  color: #f8ffff;
+}
+#footerSection p,
+li {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  text-wrap: wrap;
+}
+#footerSection h2 {
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+/* #footerSection ul {
+  padding: 0;
+  margin: 0;
+} */
+#footerSection .logoDetail {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+
+  & i {
+    font-size: 2rem;
+    background-color: transparent;
+  }
+}
+#footerSection .socialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 3rem;
+}
+#footerSection ul {
+  margin: 0;
+  padding: 0;
+}
+
+#footerSection a:hover {
+  color: #0dcaf0;
+}
+.fa-instagram:hover {
+  color: #e354d4;
+}
+.fa-facebook:hover {
+  color: #0a66c2;
+}
+
+#footerSection .scrollToTop {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 1.5rem;
+  background-color: var(--aero-color);
+  color: var(--white);
+  transition: all 1s ease;
+  font-size: 2rem;
+  border-radius: 50%;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+#footerSection .scrollToTop:hover {
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
+    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
+    rgb(255, 85, 85) 0px 0px 0px 15px;
+}
+#footerSection .fa-heart {
+  color: #990f02;
+}
+/***** End Footer Section *****/
+
+/***** Media Queries Section *****/
+
+@media (max-width: 1200px) {
+  #heroSection {
+    margin: 8rem 0 0 0;
+  }
+  #headerSection h1 {
+    font-size: 6rem;
+  }
+  #eventSection {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 992px) {
+  #heroSection h1 {
+    font-size: 5rem;
+  }
+  .section-common--heading {
+    font-size: 2.2rem;
+  }
+  .section-common--subheading {
+    font-size: 1.4rem;
+  }
+  #navbarSection .tableBtn {
+    font-size: 1.2rem;
+  }
+  #heroSection .menuBtn,
+  #bookTableSection .submitBtn {
+    font-size: 1.8rem;
+  }
+  #storySection .storyHeading {
+    font-size: 3rem;
+  }
+
+  #storySection .readMore {
+    font-size: 1.4rem;
+  }
+  #storySection .parent {
+    gap: 15rem;
+  }
+  body h2 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  #headerSection .menu {
+    display: block;
+    order: 1;
+    z-index: 999;
+    /* margin-right: 2rem; */
+  }
+  #headerSection {
+    background-color: #a0aecd;
+    background: none;
+    background-image: none;
+  }
+  #navbarSection .img {
+    margin: 2.5rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  #headerSection ul {
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    background-color: var(--black-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+  #headerSection li a {
+    font-size: 2rem;
+  }
+  #headerSection ul.active {
+    right: 0;
+  }
+  #headerSection .logo img {
+    width: 15%;
+    margin-bottom: 2.5rem;
+  }
+  #headerSection h1 {
+    font-size: 4rem;
+  }
+  #headerSection .hide {
+    display: none;
+  }
+
+  #navbarSection .tableBtn {
+    display: none;
+  }
+  #heroSection .menuBtn,
+  #bookTableSection .submitBtn {
+    font-size: 1.5rem;
+  }
+
+  #storySection {
+    background-image: none;
+    background-color: #1a1814;
+  }
+
+  #storySection .parent {
+    gap: 10rem;
+  }
+  body h2 {
+    font-size: 2.8rem;
+  }
+  #storySection img {
+    width: 60%;
+  }
+  #bookTableSection #inputDate {
+    margin-top: 2.5rem;
+  }
+  #bookTableSection #textArea {
+    margin-top: 4rem;
+  }
+  #eventSection .textAlign {
+    text-align: center;
+  }
+  #footerSection img {
+    width: 30%;
+  }
+  #contactSection .section-common--heading {
+    font-size: 2.5rem;
+  }
+  #storySection img {
+    width: 100%;
+  }
+  #storySection .parent {
+    gap: 5rem;
+  }
+}
+@media (max-width: 576px) {
+  #navbarSection a {
+    font-size: 1.2rem;
+  }
+
+  #eventSection .textAlign {
+    text-align: center;
+  }
+  #footerSection img {
+    width: 20%;
+  }
+  #whyChooseUs .cardContent {
+    font-size: 1.4rem;
+  }
+  /* #footerSection {
+    background: none;
+    background-color: var(--black-color);
+  } */
+}
+
+/***** End Media Queries Section *****/
